@@ -4,16 +4,40 @@ import { useState, useEffect } from "react"
 import Picker from "./components/Picker"
 import Player from "./components/Player"
 // ASSETS:
-// images
+// image
 import lightModeImg from "./assets/images/light.png"
 import darkModeImg from "./assets/images/dark.png"
-
+import birdImg from "./assets/images/birds.jpg"
+import fireImg from "./assets/images/fire.jpg"
+import waterImg from "./assets/images/water.jpg"
+import waveImg from "./assets/images/waves.jpg"
+import windImg from "./assets/images/wind.jpg"
+// sound
+import birdSound from "./assets/sounds/birds.wav"
+import fireSound from "./assets/sounds/fire.wav"
+import waterSound from "./assets/sounds/water.wav"
+import waveSound from "./assets/sounds/waves.wav"
+import windSound from "./assets/sounds/wind.mp3"
+// video
+import birdVid from "./assets/videos/birds.mp4"
+import fireVid from "./assets/videos/fire.mp4"
+import waterVid from "./assets/videos/water.mp4"
+import waveVid from "./assets/videos/waves.mp4"
+import windVid from "./assets/videos/wind.mp4"
 
 const App = () => {
 
   // STATE
   const [isMobile, setIsMobile] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
+  const [selected, setSelected] = useState([])
+  const sounds = [
+    {name: "birds", title: "Birds Chirping", sound: new Audio(birdSound), image: birdImg, video: birdVid, isPlaying: false},
+    {name: "water", title: "Babbling Stream", sound: new Audio(waterSound), image: waterImg, video: waterVid, isPlaying: false},
+    {name: "fire", title: "Crackling Fire", sound: new Audio(fireSound), image: fireImg, video: fireVid, isPlaying: false},
+    {name: "waves", title: "Waves Crashing", sound: new Audio(waveSound), image: waveImg, video: waveVid, isPlaying: false},
+    {name: "wind", title: "Rushing Wind", sound: new Audio(windSound), image: windImg, video: windVid, isPlaying: false}
+  ]
 
   // FUNCTIONS
   // check if being viewed on mobile device 
