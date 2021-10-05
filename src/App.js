@@ -15,8 +15,8 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-  //  FUNCTIONS
-  // check if being viewed on mobile device and assign to state
+  // FUNCTIONS
+  // check if being viewed on mobile device 
   useEffect(() => {
       if (window.innerWidth <= 1024) {
         setIsMobile(true)
@@ -25,11 +25,33 @@ const App = () => {
       }
   }, [])
 
+  // toggle dark mode
+  const toggleDarkMode = () => {
+    if (isDarkMode === false) {
+      setIsDarkMode(true)
+    } else {
+      setIsDarkMode(false)
+    }
+  }
+
+  // toggle dark mode for tabs
+  const toggleDarkModeTab = (e) => {
+    if (e.code === "Enter") {
+      if (isDarkMode === false) {
+        setIsDarkMode(true)
+      } else {
+        setIsDarkMode(false)
+      }
+    } else {
+      return
+    }
+  }
+
   return (
-    <div className="App">
+    <div className={`${isDarkMode === false ? "App" : "App dark"}`}>
       <nav>
         <h1>Calmly</h1>
-        <img src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark mode" />
+        <img onClick={toggleDarkMode} onKeyPress={toggleDarkModeTab} src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark mode" />
       </nav>
       <main>
         <Picker />
