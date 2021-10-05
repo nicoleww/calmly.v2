@@ -1,6 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .App {
   min-height: 100vh;
   width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7ecfd;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 nav {
@@ -17,12 +31,21 @@ nav {
           align-items: center;
 }
 
-nav h1 {
-  font-size: 16px;
-  font-weight: 500;
-}
-
 nav h1, nav img {
   margin: 0px 15px;
+}
+
+nav h1 {
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'Pacifico', sans-serif;
+}
+
+nav img {
+  width: 45px;
+  height: 45px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
