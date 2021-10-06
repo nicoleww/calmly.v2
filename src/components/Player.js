@@ -1,4 +1,6 @@
-const Player = () => {
+
+
+const Player = ({ sounds, selected, isMobile }) => {
     return (
         <>
         </>

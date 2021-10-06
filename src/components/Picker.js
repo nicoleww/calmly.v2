@@ -1,4 +1,6 @@
-const Picker = () => {
+
+
+const Picker = ({ sounds, selected, setSelected }) => {
     return (
         <>
         </>

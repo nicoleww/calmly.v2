@@ -78,8 +78,8 @@ const App = () => {
         <img onClick={toggleDarkMode} onKeyPress={toggleDarkModeTab} src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark mode" />
       </nav>
       <main>
-        <Picker />
-        <Player />
+        <Picker sounds={sounds} selected={selected} setSelected={setSelected} />
+        <Player sounds={sounds} selected={selected} isMobile={isMobile} />
       </main>
     </div>
   );
