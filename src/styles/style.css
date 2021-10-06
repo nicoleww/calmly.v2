@@ -1,4 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300&display=swap");
+.Picker {
+  width: 30%;
+  min-height: 92vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Picker button {
+  padding: 15px 20px;
+  width: 200px;
+  outline: none;
+  border: 4px solid #b8d7ff;
+  border-radius: 10px;
+  margin: 10px 0px;
+  background-color: #f7ecfd;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.dark button {
+  background-color: #292929;
+  color: whitesmoke;
+}
+
+#selected {
+  border: 4px solid #4c9aff;
+}
+
+.dark #selected {
+  border: 4px solid #0974ff;
+}
+
 body {
   margin: 0;
   padding: 0;

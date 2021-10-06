@@ -31,13 +31,13 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [selected, setSelected] = useState([])
-  const sounds = [
+  const [sounds, setSounds] = useState([
     {name: "birds", title: "Birds Chirping", sound: new Audio(birdSound), image: birdImg, video: birdVid, isPlaying: false},
     {name: "water", title: "Babbling Stream", sound: new Audio(waterSound), image: waterImg, video: waterVid, isPlaying: false},
     {name: "fire", title: "Crackling Fire", sound: new Audio(fireSound), image: fireImg, video: fireVid, isPlaying: false},
     {name: "waves", title: "Waves Crashing", sound: new Audio(waveSound), image: waveImg, video: waveVid, isPlaying: false},
     {name: "wind", title: "Rushing Wind", sound: new Audio(windSound), image: windImg, video: windVid, isPlaying: false}
-  ]
+  ])
 
   // FUNCTIONS
   // check if being viewed on mobile device 
@@ -71,6 +71,7 @@ const App = () => {
     }
   }
 
+
   return (
     <div className={`${isDarkMode === false ? "App" : "App dark"}`}>
       <nav>
@@ -78,7 +79,7 @@ const App = () => {
         <img onClick={toggleDarkMode} onKeyPress={toggleDarkModeTab} src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark mode" />
       </nav>
       <main>
-        <Picker sounds={sounds} selected={selected} setSelected={setSelected} />
+        <Picker sounds={sounds} selected={selected} setSelected={setSelected} setSounds={setSounds} />
         <Player sounds={sounds} selected={selected} isMobile={isMobile} />
       </main>
     </div>
