@@ -1,6 +1,8 @@
 
 const Picker = ({ sounds, selected, setSelected, setSounds }) => {
 
+    // select sound and add it to state
+    // if sound is already in state, remove it from array
     const toggleSelected = (sound) => {
         if (selected.map(sel => sel).indexOf(sound) > -1) {
             let tmpSelected = selected.map(sel => sel)
@@ -26,6 +28,7 @@ const Picker = ({ sounds, selected, setSelected, setSounds }) => {
 
     return (
         <div className="Picker">
+            {/* map over array of sounds and give custom id attribute if it is currently selected to play */}
             {sounds.map((sound, idx) => {
                 return (
                     <section key={idx}>
