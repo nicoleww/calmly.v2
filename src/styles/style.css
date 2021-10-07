@@ -21,7 +21,7 @@
   padding: 15px 20px;
   width: 200px;
   outline: none;
-  border: 4px solid #b8d7ff;
+  border: 4px solid #a2cbff;
   border-radius: 10px;
   margin: 10px 0px;
   background-color: #f7ecfd;
@@ -37,10 +37,6 @@
 }
 
 #selected {
-  border: 4px solid #4c9aff;
-}
-
-.dark #selected {
   border: 4px solid #0974ff;
 }
 

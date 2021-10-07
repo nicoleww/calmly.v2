@@ -13,7 +13,7 @@
     padding: 15px 20px;
     width: 200px;
     outline: none;
-    border: 4px solid rgb(184, 215, 255);
+    border: 4px solid rgb(162, 203, 255);
     border-radius: 10px;
     margin: 10px 0px;
     background-color: $lightBg;
@@ -29,9 +29,5 @@
 }
 
 #selected {
-    border: 4px solid rgb(76, 154, 255);
-}
-
-.dark #selected {
     border: 4px solid rgb(9, 116, 255);
 }
