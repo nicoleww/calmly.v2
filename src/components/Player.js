@@ -24,6 +24,10 @@ const Player = ({ sounds, selected, isMobile }) => {
         }
     }
 
+    const handleVideoSelected = (sel) => {
+
+    }
+
     // when selected array is changed, change vidSrc to appropriate video
     useEffect(() => {
         let play;
@@ -57,14 +61,15 @@ const Player = ({ sounds, selected, isMobile }) => {
                 (
                     <>
                     <video ref={vidRef} src={videoSrc} muted loop></video>
+                    <p tabIndex="0" className="visually-hidden">Select a video to display.</p>
                     <div className="select-video">
-                        {selected.map(sel => <button>{sel.title}</button>)}
+                        {selected.map(sel => <button onClick={() => {handleVideoSelected(sel)}}>{sel.title}</button>)}
                     </div>
                     <button onClick={togglePause}>
                         {isPaused === false ? 
-                        (<img src={pause} alt="pause" />)
+                        (<img src={pause} alt="Pause video." />)
                         :
-                        (<img src={play} alt="play" />)
+                        (<img src={play} alt="Play video." />)
                         }
                     </button>
                     </>

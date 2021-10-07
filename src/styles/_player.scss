@@ -14,10 +14,10 @@
 
 .Player button {
     padding: 10px;
-    outline: none;
     background-color: $lightBg;
     border: none;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .dark button {
@@ -30,5 +30,23 @@
 
 .Player video {
     width: 900px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.select-video {
+    margin-top: 30px;
+}
+
+.select-video button {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+    border-radius: 5%;
+    margin: 0px 5px;
+}
+
+.dark .select-video button {
+    background-color: grey;
 }

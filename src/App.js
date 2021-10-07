@@ -76,7 +76,7 @@ const App = () => {
     <div className={`${isDarkMode === false ? "App" : "App dark"}`}>
       <nav>
         <h1>Calmly</h1>
-        <img onClick={toggleDarkMode} onKeyPress={toggleDarkModeTab} src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark mode" />
+        <img onClick={toggleDarkMode} onKeyPress={toggleDarkModeTab} src={`${isDarkMode === false ? (darkModeImg) : (lightModeImg)}`} tabIndex="0" alt="toggle dark and light mode" />
       </nav>
       <main>
         <Picker sounds={sounds} selected={selected} setSelected={setSelected} setSounds={setSounds} />
