@@ -37,7 +37,7 @@ const Picker = ({ sounds, selected, setSelected, setSounds }) => {
 
     return (
         <div className="Picker">
-                                <p tabIndex="0" className="visually-hidden">Select sounds to hear.</p>
+            <p tabIndex="0" className="visually-hidden">Select sounds to hear.</p>
             {/* map over array of sounds and give custom id attribute if it is currently selected to play */}
             {sounds.map((sound, idx) => {
                 return (

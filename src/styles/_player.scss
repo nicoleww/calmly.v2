@@ -50,3 +50,11 @@
 .dark .select-video button {
     background-color: grey;
 }
+
+#selected-vid {
+    background-color: rgb(162, 203, 255);
+}
+
+.dark #selected-vid {
+    color: $darkBg;
+}

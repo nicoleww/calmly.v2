@@ -11,6 +11,7 @@ const Player = ({ sounds, selected, isMobile }) => {
     const [videoSrc, setVideoSrc] = useState(birdVid)
     const [imgSrc, setImgSrc] = useState(birdImg)
     const [imgAlt, setImgAlt] = useState("A small bird sitting on a tree branch.")
+    const [selectedVid, setSelectedVid] = useState('')
     const vidRef = useRef(null)
 
     // play / pause video and set correlating icon
@@ -24,8 +25,10 @@ const Player = ({ sounds, selected, isMobile }) => {
         }
     }
 
+    // when user selects a video, assign it to vidSrc to play
     const handleVideoSelected = (sel) => {
-
+        setSelectedVid(sel.name)
+        setVideoSrc(sel.video)
     }
 
     // when selected array is changed, change vidSrc to appropriate video
@@ -43,6 +46,7 @@ const Player = ({ sounds, selected, isMobile }) => {
         }
     }, [selected])
 
+    // when videoSrc is changed, display selected video
     useEffect(() => {
         vidRef.current.play()
     }, [videoSrc])
@@ -54,16 +58,18 @@ const Player = ({ sounds, selected, isMobile }) => {
 
     return (
         <div className="Player">
+            {/* if being viewed on desktop sized screen, render video else render photo */}
             {isMobile === false ? 
             (
                 <>
+                {/* if more than one sound selected, render video feed options */}
                 {selected.length > 1 ? 
                 (
                     <>
                     <video ref={vidRef} src={videoSrc} muted loop></video>
                     <p tabIndex="0" className="visually-hidden">Select a video to display.</p>
                     <div className="select-video">
-                        {selected.map(sel => <button onClick={() => {handleVideoSelected(sel)}}>{sel.title}</button>)}
+                        {selected.map(sel => <button id={`${sel.name === selectedVid ? "selected-vid" : ""}`} onClick={() => {handleVideoSelected(sel)}}>{sel.title}</button>)}
                     </div>
                     <button onClick={togglePause}>
                         {isPaused === false ? 

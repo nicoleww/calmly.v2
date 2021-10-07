@@ -110,6 +110,14 @@
   background-color: grey;
 }
 
+#selected-vid {
+  background-color: #a2cbff;
+}
+
+.dark #selected-vid {
+  color: #292929;
+}
+
 body {
   margin: 0;
   padding: 0;
