@@ -1,0 +1,34 @@
+.Player {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Player button img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.Player button {
+    padding: 10px;
+    outline: none;
+    background-color: $lightBg;
+    border: none;
+    cursor: pointer;
+}
+
+.dark button {
+    background-color: $darkBg;
+}
+
+.Player button:hover {
+    transform: scale(1.05);
+}
+
+.Player video {
+    width: 900px;
+    margin-bottom: 50px;
+}

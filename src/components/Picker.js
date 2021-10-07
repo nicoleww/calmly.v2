@@ -4,7 +4,7 @@ const Picker = ({ sounds, selected, setSelected, setSounds }) => {
     // select sound and add it to state
     const toggleSelected = (sound) => {
         let audio = sound.sound
-        // if sound is already selected, remove it from selected array
+        // if sound is already selected, remove it from selected array and stop playing
         if (selected.map(sel => sel).indexOf(sound) > -1) {
             let tmpSelected = selected.map(sel => sel)
             let soundToCut = tmpSelected.map(sound => sound).find(s => s === sound)
@@ -18,7 +18,7 @@ const Picker = ({ sounds, selected, setSelected, setSounds }) => {
             audio.pause()
             audio.currentTime = 0
         } else {
-            // if sound isn't already selected, change isPlaying to true and push to state
+            // if sound isn't already selected, change isPlaying to true, push to state, and play
             let tmpSounds = sounds.map(sound => sound)
             let soundToPlay = tmpSounds.map(sound => sound).find(s => s === sound)
             soundToPlay.isPlaying = true

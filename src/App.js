@@ -32,11 +32,11 @@ const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [selected, setSelected] = useState([])
   const [sounds, setSounds] = useState([
-    {name: "birds", title: "Birds Chirping", sound: new Audio(birdSound), image: birdImg, video: birdVid, isPlaying: false},
-    {name: "water", title: "Babbling Stream", sound: new Audio(waterSound), image: waterImg, video: waterVid, isPlaying: false},
-    {name: "fire", title: "Crackling Fire", sound: new Audio(fireSound), image: fireImg, video: fireVid, isPlaying: false},
-    {name: "waves", title: "Waves Crashing", sound: new Audio(waveSound), image: waveImg, video: waveVid, isPlaying: false},
-    {name: "wind", title: "Rushing Wind", sound: new Audio(windSound), image: windImg, video: windVid, isPlaying: false}
+    {name: "birds", title: "Birds Chirping", sound: new Audio(birdSound), image: birdImg, caption: "A small bird sitting on a tree branch.", video: birdVid, isPlaying: false},
+    {name: "water", title: "Babbling Stream", sound: new Audio(waterSound), image: waterImg, caption: "A stream in a wooded area.", video: waterVid, isPlaying: false},
+    {name: "fire", title: "Crackling Fire", sound: new Audio(fireSound), image: fireImg, caption: "A close up of a fireplace.", video: fireVid, isPlaying: false},
+    {name: "waves", title: "Waves Crashing", sound: new Audio(waveSound), image: waveImg, caption: "Waves crashing on a beach.", video: waveVid, isPlaying: false},
+    {name: "wind", title: "Rushing Wind", sound: new Audio(windSound), image: windImg, caption: "Plants bending in the wind.", video: windVid, isPlaying: false}
   ])
 
   // FUNCTIONS
