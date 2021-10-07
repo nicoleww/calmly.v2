@@ -22,6 +22,10 @@ const Picker = ({ sounds, selected, setSelected, setSounds }) => {
             let tmpSounds = sounds.map(sound => sound)
             let soundToPlay = tmpSounds.map(sound => sound).find(s => s === sound)
             soundToPlay.isPlaying = true
+            // adjust volume to balance sounds
+            if (soundToPlay.name === "water" || soundToPlay.name === "wind") {
+                soundToPlay.sound.volume = 0.1
+            } 
             tmpSounds.splice(tmpSounds.indexOf(soundToPlay), 1, soundToPlay)
             setSounds(tmpSounds)
             let tmpSelected = selected.map(sel => sel)
