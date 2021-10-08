@@ -5,7 +5,8 @@
 <p>Calmly is a web app that uses calming nature sounds to help you sleep or relax!</p>
 <p>The web app features a dark/light mode toggle for better users UX as well as five sounds which users can choose, and play on loop with an image or video that corresponds with the selected sound.</p>
 <p>On window load, the app will either deliver a video or image depending on whether it is being viewed on mobile.</p>
-<p>Users can also select multiple soounds to create their own custom nature sounds.</p>
+<p>Users can also select multiple sounds to create their own custom nature sounds.</p>
+<p>If multiple sounds are selected, the user will have the ability to choose which video/image to view.</p>
 <h3>Screenshots: Desktop</h3>
 <img src="https://i.imgur.com/Ayq335p.png" />
 <img src="https://i.imgur.com/U7zglCu.png" />
