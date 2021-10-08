@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/calmly.v2/static/css/main.17becd8a.chunk.css",
+    "main.js": "/calmly.v2/static/js/main.3ae0d526.chunk.js",
+    "main.js.map": "/calmly.v2/static/js/main.3ae0d526.chunk.js.map",
+    "runtime-main.js": "/calmly.v2/static/js/runtime-main.9d832fab.js",
+    "runtime-main.js.map": "/calmly.v2/static/js/runtime-main.9d832fab.js.map",
+    "static/js/2.71ed67aa.chunk.js": "/calmly.v2/static/js/2.71ed67aa.chunk.js",
+    "static/js/2.71ed67aa.chunk.js.map": "/calmly.v2/static/js/2.71ed67aa.chunk.js.map",
+    "static/js/3.754457a5.chunk.js": "/calmly.v2/static/js/3.754457a5.chunk.js",
+    "static/js/3.754457a5.chunk.js.map": "/calmly.v2/static/js/3.754457a5.chunk.js.map",
+    "index.html": "/calmly.v2/index.html",
+    "static/css/main.17becd8a.chunk.css.map": "/calmly.v2/static/css/main.17becd8a.chunk.css.map",
+    "static/js/2.71ed67aa.chunk.js.LICENSE.txt": "/calmly.v2/static/js/2.71ed67aa.chunk.js.LICENSE.txt",
+    "static/media/birds.0293d4f7.wav": "/calmly.v2/static/media/birds.0293d4f7.wav",
+    "static/media/birds.02d3ac30.mp4": "/calmly.v2/static/media/birds.02d3ac30.mp4",
+    "static/media/birds.2b6ea8fa.jpg": "/calmly.v2/static/media/birds.2b6ea8fa.jpg",
+    "static/media/dark.30893c12.png": "/calmly.v2/static/media/dark.30893c12.png",
+    "static/media/fire.0fc59675.mp4": "/calmly.v2/static/media/fire.0fc59675.mp4",
+    "static/media/fire.a1409078.wav": "/calmly.v2/static/media/fire.a1409078.wav",
+    "static/media/fire.c5e3f7e6.jpg": "/calmly.v2/static/media/fire.c5e3f7e6.jpg",
+    "static/media/light.2094873f.png": "/calmly.v2/static/media/light.2094873f.png",
+    "static/media/water.07e46859.jpg": "/calmly.v2/static/media/water.07e46859.jpg",
+    "static/media/water.1576c886.mp4": "/calmly.v2/static/media/water.1576c886.mp4",
+    "static/media/water.4c1863ba.wav": "/calmly.v2/static/media/water.4c1863ba.wav",
+    "static/media/waves.520aef08.jpg": "/calmly.v2/static/media/waves.520aef08.jpg",
+    "static/media/waves.66ae3b32.wav": "/calmly.v2/static/media/waves.66ae3b32.wav",
+    "static/media/waves.772b7bd8.mp4": "/calmly.v2/static/media/waves.772b7bd8.mp4",
+    "static/media/wind.a7f72210.mp4": "/calmly.v2/static/media/wind.a7f72210.mp4",
+    "static/media/wind.b90802f7.jpg": "/calmly.v2/static/media/wind.b90802f7.jpg",
+    "static/media/wind.c828054d.mp3": "/calmly.v2/static/media/wind.c828054d.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d832fab.js",
+    "static/js/2.71ed67aa.chunk.js",
+    "static/css/main.17becd8a.chunk.css",
+    "static/js/main.3ae0d526.chunk.js"
+  ]
+}
