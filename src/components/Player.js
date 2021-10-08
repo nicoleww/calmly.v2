@@ -12,6 +12,7 @@ const Player = ({ sounds, selected, isMobile }) => {
     const [imgSrc, setImgSrc] = useState(birdImg)
     const [imgAlt, setImgAlt] = useState("A small bird sitting on a tree branch.")
     const [selectedVid, setSelectedVid] = useState('')
+    const [selectedImg, setSelectedImg] = useState('')
     const vidRef = useRef(null)
 
     // play / pause video and set correlating icon
@@ -31,29 +32,61 @@ const Player = ({ sounds, selected, isMobile }) => {
         setVideoSrc(sel.video)
     }
 
+    // when user selects an image, assign it to imgSrc
+    const handleImageSelected = (sel) => {
+        setSelectedImg(sel.name)
+        setImgSrc(sel.image)
+        setImgAlt(sel.caption)
+    }
+
     // when selected array is changed, change vidSrc to appropriate video
     useEffect(() => {
-        let play;
-        if (selected.length === 1) {
-            play = selected[0].video
-            setVideoSrc(play)
-        } else if (selected.length > 1) {
-            const index = selected.length -1
-            play = selected[index].video
-            setVideoSrc(play)
-        } else if (selected.length === 0) {
-            vidRef.current.pause()
+        if (isMobile === true) {
+            let view
+            let alt 
+            if (selected.length === 1) {
+                view = selected[0].image
+                alt = selected[0].caption
+                setImgSrc(view)
+                setImgAlt(alt)
+            } else if (selected.length > 1) {
+                const index = selected.length -1
+                view = selected[index].image
+                alt = selected[index].caption
+                setImgSrc(view)
+                setImgAlt(alt)
+            }
+        } else {
+            let play;
+            if (selected.length === 1) {
+                play = selected[0].video
+                setVideoSrc(play)
+            } else if (selected.length > 1) {
+                const index = selected.length -1
+                play = selected[index].video
+                setVideoSrc(play)
+            } else if (selected.length === 0) {
+                vidRef.current.pause()
+            }
         }
     }, [selected])
 
     // when videoSrc is changed, display selected video
     useEffect(() => {
-        vidRef.current.play()
+        if (isMobile === true) {
+            return
+        } else {
+            vidRef.current.play()
+        }
     }, [videoSrc])
 
     // on window load, play current video
     useEffect(() => {
-        vidRef.current.play()
+        if (isMobile === true) {
+            return
+        } else {
+            vidRef.current.play()
+        }
     }, [])
 
     return (
@@ -98,7 +131,21 @@ const Player = ({ sounds, selected, isMobile }) => {
             ) 
             : 
             (
-                <img src={birdImg} alt={imgAlt} />
+                <>
+                {selected.length > 1 ? 
+                (
+                    <>
+                    <img src={imgSrc} alt={imgAlt} />
+                    <p tabIndex="0" className="visually-hidden">Select an image to display.</p>
+                    <div className="select-img">
+                        {selected.map(sel => <button id={`${sel.name === selectedImg ? "selected-img" : ""}`} onClick={() => {handleImageSelected(sel)}}>{sel.title}</button>)}
+                    </div>
+                    </>
+                )
+                :
+                (<img src={imgSrc} alt={imgAlt} />)
+                }
+                </>
             )
             }
         </div>

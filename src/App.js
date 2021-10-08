@@ -28,7 +28,7 @@ import windVid from "./assets/videos/wind.mp4"
 const App = () => {
 
   // STATE
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(true)
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [selected, setSelected] = useState([])
   const [sounds, setSounds] = useState([
@@ -42,9 +42,10 @@ const App = () => {
   // FUNCTIONS
   // check if being viewed on mobile device 
   useEffect(() => {
-      if (window.innerWidth <= 1024) {
+      if (window.innerWidth < 1030) {
         setIsMobile(true)
       } else {
+        console.log("problem here")
         setIsMobile(false)
       }
   }, [])

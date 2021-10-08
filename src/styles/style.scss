@@ -21,10 +21,6 @@ body {
     color: $darkBg;
 }
 
-.dark {
-    background-color: $darkBg;
-    color: $lightText;
-}
 
 nav {
     width: 100%;
@@ -65,4 +61,22 @@ main {
     position: absolute;
     white-space: nowrap;
     width: 1px;
+}
+
+
+// MOBILE STYLES
+
+@media screen and (max-width: 1024px) {
+    main {
+        flex-direction: column;
+    }
+}
+
+
+// DARK MODE STYLES
+
+
+.dark {
+    background-color: $darkBg;
+    color: $lightText;
 }
