@@ -28,7 +28,7 @@ import windVid from "./assets/videos/wind.mp4"
 const App = () => {
 
   // STATE
-  const [isMobile, setIsMobile] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(false)
   const [selected, setSelected] = useState([])
   const [sounds, setSounds] = useState([
