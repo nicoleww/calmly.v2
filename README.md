@@ -22,7 +22,7 @@
 </ul>
 <h3>View Live / Get Started </h3>
 <p>You can access my deployed project <a href="https://nicoleww.github.io/calmly.v2/">here</a>.</p>
-<h3>Ice box<h3>
+<h3>Ice box</h3>
   <ul>
     <li>Add more sounds to project.</li>
   </ul>
